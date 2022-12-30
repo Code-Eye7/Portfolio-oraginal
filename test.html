@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            max-width: 90%;
+            height: 500px;
+            margin: auto;
+            padding: 5px;
+        }
+
+        .row {
+            display: flex;
+            background: rgb(111, 160, 149);
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .row div {
+            background: green;
+            flex: 0 0 45%;
+            height: 50px;
+            margin: 0 10px 0 10px;
+            display: inline;
+        }
+
+        .row.xx div {
+            background: blue;
+            margin: 10px;
+        }
+
+        .xx div {
+            background: #000;
+        }
+
+        @media (max-width:500px) {
+            .row div {
+                flex: 0 0 100%;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="row xx ">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-switcher.css">
+    <!-- === live style switcher start -->
+    <link rel="stylesheet" href="color1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="color2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="color3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="color4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="color5.css" class="alternate-style" title="color-5" disabled>
+    <!-- === live style switcher end -->
+    <title>contact form styling </title>
+    <style>
+       .contact {
+        display: flex;
+        flex-wrap: wrap;
+
+       } 
+
+.btn {
+    background: #000;
+    padding: 20px 35px;
+    color: aquamarine;
+    border-radius: 45px;
+    margin-top: 40px;
+
+}
+       /* today work */
+.contact .contact-form
+{
+flex: 0 0 100%; max-width: 100%;
+}
+.contact .contact-form .col-6
+{
+flex: 0 0 50%; max-width: 50%;
+}
+.contact .contact-form .col-12
+{
+flex: 0 0 100%; max-width: 100%; 
+
+}
+.contact .contact-form .form-item {
+    margin-bottom: 30px;
+}
+.contact .contact-form .form-item .form-control
+{
+width: 100%;
+height: 50px;
+border-radius: 25px;
+/* background: var (--bg-black-100); */
+border: 1px solid red; padding: 10px 25px; font-size: 16px;
+/* color: var(--text-black-700); */
+color: antiquewhite;
+transition: all 0.3s ease;
+}
+.contact .contact-form .form-item .form-control:focus
+{
+box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.contact .contact-form .form-item textarea.form-control
+{height: 140px;
+}
+
+.contact .contact-form .btn
+{
+    height: 50px;
+padding: 50px;
+}
+
+/* responsive */
+@media (max-width: 1199px)
+{
+    .aside {
+        left: -270px;
+    }
+
+
+
+
+.main-content
+{
+    padding-left: 0;
+}
+
+
+.about .about-content .personal-info .info-item p span
+{
+display: block;
+margin-left: 0;
+} }
+
+
+@media (max-width:991px)
+{
+.contact .contact-info-item,
+ .portfolio .portfolio-item,
+.service.service-item
+{
+flex: 0 0 50%;
+max-width: 50%;
+}
+.home .home-info
+{
+flex: 0 0 100%;
+max-width: 100%;
+}
+.home .home-img
+{
+display: none;
+}
+}
+
+
+
+@media (max-width:767px)
+{
+.contact .contact-form .col-6,
+.contact
+.contact-info-item,
+.portfolio .portfolio-item,
+.service.service-item,
+.about .about-content .experience, 
+.about .about-content .education, 
+ .about .about-content .skills,
+.about .about-content .personal-info
+{
+   flex: 0 0 100%;
+   width:100%; 
+ }
+}
+    </style>
+</head>
+<body>
+    <div class="contact">
+        <div class="row">
+            <div class="contact-form">
+                <div class="row">
+                    <div class="form-item col-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name ..."> 
+                        </div>
+                    
+                    </div>
+                    <div class="form-item col-6">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="email ..."> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="message ..."> 
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12">
+                        <div class="form-group">
+                           <textarea  class="form-group form-control" placeholder=""></textarea>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-item col-12">
+                     
+                            <input type="text" class="form-control" placeholder="message ..."> 
+                       <button type="submit" class="btn">send your massege </button>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- ====style switcher edn===== -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fa fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icpn">
+            <i class="fas"></i>
+        </div>
+        <h4>thems colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActLivestyle('color-1')"></span>
+            <span class="color-2" onclick="setActLivestyle('color-2')"></span>
+            <span class="color-3" onclick="setActLivestyle('color-3')"></span>
+            <span class="color-4" onclick="setActLivestyle('color-4')"></span>
+            <span class="color-5" onclick="setActLivestyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- === style switcher edn -->
+    
+</body>
+</html>
